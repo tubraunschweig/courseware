@@ -15,8 +15,9 @@ class AudioBlock extends Block
     }
 
     function student_view()
-    {   
-        return array_merge($this->getAttrArray(), array("audio_played"=> $this->getProgress()['grade']));
+    {
+        $progress = $this->getProgress();
+        return array_merge($this->getAttrArray(), array("audio_played"=> $progress['grade']));
     }
 
     function author_view()
